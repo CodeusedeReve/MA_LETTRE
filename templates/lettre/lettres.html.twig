@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LettreController!{% endblock %}
+
+{% block body %}
+<section class="lettres">
+<table class="table table-hover">
+<thead>
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Age</th>
+      <th scope="col">Adresse</th>
+    </tr>
+  </thead>
+{% for lettre in lettres %}
+
+
+  <tbody >
+
+    <tr class="table-default">
+      <th scope="row">default</th>
+      <td>{{lettre.nom}}</td>
+      <td>{{lettre.age}}</td>
+      <td>{{lettre.adresse}}</td>
+        <td ><a href={{path('show_Lettre',{'id':lettre.id})}}>afficher</a></td>
+    </tr>
+
+  </tbody>
+
+{% endfor %}
+</table>
+</section>
+{% endblock %}

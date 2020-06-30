@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <h2>{{lettre.nom}}</h2>
+         <h2>{{lettre.age}}</h2>
+        <h2>{{lettre.adresse}}</h2>
+        <h2>{{lettre.adresse}}</h2>
+        <p>{{lettre.textlettre|raw}}</p>
+<button type="button" href={{path('lettre_imp')}}  class="btn btn-secondary text-sm-right">Imprimer</button>
+
+
+{% endblock %}

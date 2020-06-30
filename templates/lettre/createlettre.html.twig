@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% form_theme formLettre 'bootstrap_4_layout.html.twig' %}
+
+ {% block body %}
+ <h1>Redaction d'une lettre</h1>
+ {{form_start(formLettre)}}
+
+ {{form_row(formLettre.nom,{'attr':{'placeholder':"Ecrivez votre nom"}})}}
+ {{form_row(formLettre.age,{'attr':{'placeholder':"Ecrivez votre age"}})}}
+ {{form_row(formLettre.adresse,{'attr':{'placeholder':"Ecrivez votre adresse"}})}}
+ {{form_row(formLettre.textlettre,{'attr':{'placeholder':"Ecrivez votre lettre"}})}}
+ {{form_row(formLettre.imagelettre,{'attr':{'placeholder':"Choisissez une image"}})}}
+  {{form_end(formLettre)}}
+
+ {% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig'%}
+{% block body %}
+	<h1>Ajout d'un nouveau membre</h1>
+	{{form_start(form)}}
+	{{form_row(form.username,
+    {'label':'nom du membre','attr':{'placeholder':'nom du membre'}})}}
+	{{form_row(form.email,
+    {'label':'email du membre','attr':{'placeholder':'email du membre'}})}}
+	{{form_row(form.password,
+    {'label':'mot de passe du membre','attr':{'placeholder':'mot de passe du membre'}})}}
+	{{form_row(form.confirm_password,
+    {'label':'confirmer mot de passe du membre','attr':{'placeholder':'repeter le mot de passe du membre'}})}}
+	<button type="submit" class="btn btn-success">Inscription</button>
+	{{form_end(form)}}
+{% endblock %}
